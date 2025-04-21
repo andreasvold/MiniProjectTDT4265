@@ -1,0 +1,12 @@
+The SnowPole Detection Dataset contains multiple folders representing different LiDAR modalities. The dataset is split into training (70%), validation (20%), and test (10%) sets. Each modality folder contains images in YOLO labeling format, with annotations shared across all modalities.
+
+Dataset Structure
+combined_color/: RGB images combining Near-IR, Signal, and Reflectivity channels. Near-IR maps to blue, Signal to green, and Reflectivity to red.
+
+train/: Training images.
+valid/: Validation images.
+test/: Test images.
+labels/: YOLO-format annotations shared across all modalities.
+
+Labeling Information
+Labels are provided in YOLO format, with annotations specifying bounding box coordinates and the class “snow pole.” These labels are in the labels folder and apply uniformly across all modalities, supporting consistent object detection training across different data types.
