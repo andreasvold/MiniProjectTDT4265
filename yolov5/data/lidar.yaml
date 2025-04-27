@@ -1,0 +1,9 @@
+# Dataset root directory relative to the yolov5 directory
+path: ../datasets/lidar
+
+# Train/val/test sets: specify directories, *.txt files, or lists
+train: images/train # 128 images for training
+val: images/valid # 128 images for validation
+
+nc: 1
+names: ['pole']
