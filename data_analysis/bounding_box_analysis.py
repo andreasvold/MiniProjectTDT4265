@@ -11,9 +11,8 @@ def calculate_box_statistics(image_dir, label_dir,is_ttpla):
 
     for label_name in os.listdir(label_dir):
         if label_name.endswith('.txt'):
-            # Construct the corresponding image file name
             if is_ttpla:
-                img_name = label_name.replace('.txt', '.jpg')  # Change extension if needed
+                img_name = label_name.replace('.txt', '.jpg') 
             else:
                 img_name = label_name.replace('.txt', '.png')
             img_path = os.path.join(image_dir, img_name)
@@ -47,12 +46,12 @@ def calculate_box_statistics(image_dir, label_dir,is_ttpla):
             box_areas.extend(areas)
             objects_per_image.append(len(boxes))
 
-            # Calculate overlap (IoU) - check if boxes overlap with each other (this is just an example)
+            # Calculate overlap 
             for i in range(len(boxes)):
                 for j in range(i+1, len(boxes)):
                     box1 = boxes[i]
                     box2 = boxes[j]
-                    # Simple IoU check (can be expanded to more complex logic)
+                    # Simple IoU check
                     if iou(box1, box2) > 0.5:
                         overlap_count += 1
 

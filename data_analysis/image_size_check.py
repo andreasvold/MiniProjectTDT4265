@@ -20,7 +20,6 @@ def check_image_sizes(image_dir):
 
 
 
-# Example usage
 print("\n Training data \n")
 check_image_sizes("/Users/andre/projects/MiniProjectTDT4265/datasets/rgb/images/train")
 print("\n Validation data \n")

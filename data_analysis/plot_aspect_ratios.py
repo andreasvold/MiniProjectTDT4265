@@ -10,7 +10,6 @@ def calculate_aspect_ratios(image_dir_train, image_dir_valid):
         plt.xlabel('Aspect Ratio')
         plt.ylabel('Frequency')
 
-        # Add text labels next to each bar (horizontally)
         for count, bin_start, bin_end in zip(counts, bins[:-1], bins[1:]):
             if count > 0:
                 bin_center = (bin_start + bin_end) / 2
@@ -18,7 +17,7 @@ def calculate_aspect_ratios(image_dir_train, image_dir_valid):
 
         plt.show()
 
-    # --- Training set ---
+    # Training set
     aspect_ratios_train = []
     for image in os.listdir(image_dir_train):
         img_path = os.path.join(image_dir_train, image)
@@ -32,7 +31,7 @@ def calculate_aspect_ratios(image_dir_train, image_dir_valid):
 
     plot_aspect_ratios(aspect_ratios_train, 'Aspect Ratios of Training Images Histogram')
 
-    # --- Validation set ---
+    # Validation set
     aspect_ratios_valid = []
     for image in os.listdir(image_dir_valid):
         img_path = os.path.join(image_dir_valid, image)
@@ -46,7 +45,6 @@ def calculate_aspect_ratios(image_dir_train, image_dir_valid):
 
     plot_aspect_ratios(aspect_ratios_valid, 'Aspect Ratios of Validation Images Histogram')
 
-# Run
 calculate_aspect_ratios(
     "/Users/andre/projects/MiniProjectTDT4265/datasets/rgb/images/train",
     "/Users/andre/projects/MiniProjectTDT4265/datasets/rgb/images/valid"
